@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/services',[ServiceController::class,"ServiceView"]);
+
+
+Route::get('/allProjects',[ProjectController::class,"ProjectView"]);
+Route::get('/threeProjects',[ProjectController::class,"LastThreeProjects"]);
+Route::get('/projectdetails/{id}',[ProjectController::class,"ProjectDetails"]);
+
+
+
+
+
