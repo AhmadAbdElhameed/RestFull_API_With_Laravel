@@ -6,6 +6,11 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\FooterController;
+use App\Http\Controllers\Admin\ChartController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ContactController;
 
 
 
@@ -39,6 +44,32 @@ Route::get('/courseDetails/{id}',[CourseController::class,"courseDetails"]);
 
 // Footer
 Route::get('/footer',[FooterController::class,"footerView"]);
+
+
+
+// Chart
+Route::get('/chart',[ChartController::class,"chartView"]);
+
+
+// Team
+Route::get('/team',[TeamController::class,"teamView"]);
+
+
+
+// About
+Route::get('/about',[AboutController::class,"aboutView"]);
+
+
+// Home
+Route::get('/home',[HomeController::class,"homeView"]);
+
+// Contact
+Route::post('/contact',[ContactController::class,"contact"]);
+
+
+
+
+
 
 
 
